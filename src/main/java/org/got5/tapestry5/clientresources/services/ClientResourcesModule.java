@@ -104,6 +104,15 @@ public class ClientResourcesModule
         };
         configuration.add("RenderSupportDecorator", renderSupportInterceptor, "after:RenderSupport", "before:ClientBehaviorSupport",
                 "before:InjectDefaultStyleheet", "before:Heartbeat");
+
+        MarkupRendererFilter empty = new MarkupRendererFilter()
+        {
+            public void renderMarkup(MarkupWriter writer, MarkupRenderer renderer)
+            {
+            	renderer.renderMarkup(writer);
+            }
+        };
+        configuration.override("InjectDefaultStyleheet", empty);
     }
     
     
