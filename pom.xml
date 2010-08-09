@@ -139,10 +139,11 @@
 			<id>apache-snapshots</id>
 			<url>http://repository.apache.org/snapshots</url>
 		</repository>
-		
+	
+		<!-- TODO: remove when 5.2 hits central -->
 		<repository>
 			<id>apache-snapshots2</id>
-			<url>https://repository.apache.org/content/repositories/orgapachetapestry-063/</url>
+			<url>https://repository.apache.org/content/groups/public</url>
 		</repository>
 
 		<repository>
